@@ -1,52 +1,21 @@
 {
-  "compileOnSave": false,
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "module": "commonjs",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "target": "es5",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "allowJs": false,
-    "declaration": true,
     "jsx": "react",
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "outDir": "./build",
-    "noLib": false,
-    "lib": ["dom", "es5", "es2015", "es2016.array.include"],
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "paths": {
-      "react-uwp": ["./src"],
-      "react-uwp/*": ["./src/*"]
-    },
-    "baseUrl": "."
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true
   },
-  "filesGlob": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "files": [
-    "./src/index.d.ts"
-  ],
-  "include": [
-    "*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "__mocks__/**/*.ts",
-    "__mocks__/**/*.tsx",
-    "./typings/index.d.ts"
-  ],
-  "exclude": [
-    "./build",
-    "./scripts",
-    "./docs",
-    "./packages",
-    "./__mocks__",
-    "./node_modules"
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
   ]
 }
